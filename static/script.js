@@ -43,6 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('message').textContent = data.message;
       console.log(`Resultado do jogo: ${data.message}`);
     }
+    if (data.type === 'chat') {
+      const chatMessages = document.getElementById('chat-messages');
+      const messageElement = document.createElement('div');
+      messageElement.textContent = `${
+        data.color === 'black' ? 'Preto' : 'Branco'
+      }: ${data.chatMessage}`;
+      chatMessages.appendChild(messageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
   };
 
   const createBoard = () => {
@@ -113,6 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
         type: 'resign',
       })
     );
+  });
+
+  document.getElementById('chat-send').addEventListener('click', () => {
+    const chatInput = document.getElementById('chat-input');
+    const message = chatInput.value;
+    if (message) {
+      socket.send(
+        JSON.stringify({
+          type: 'chat',
+          chatMessage: message,
+        })
+      );
+      chatInput.value = '';
+    }
   });
 
   createBoard();
