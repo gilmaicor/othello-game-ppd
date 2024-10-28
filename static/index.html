@@ -9,13 +9,17 @@
 <body>
     <div class="container">
         <h1>Othello (Reversi)</h1>
-        <div id="scoreboard">
-            <span id="black-count">Preto: 0</span>
-            <span id="white-count">Branco: 0</span>
-        </div>
-        <div id="player-color">Aguardando cor...</div>
-        <div id="player-turn">Vez do jogador: Preto</div>
         <div class="game-container">
+            <div class="sidebar">
+                <div id="scoreboard">
+                    <span id="black-count">Preto: 0</span>
+                    <span id="white-count">Branco: 0</span>
+                </div>
+                <div id="player-color">Aguardando cor...</div>
+                <div id="player-turn">Vez do jogador: Preto</div>
+                <button id="resign-button">Desistir</button>
+                <div id="message"></div>
+            </div>
             <div id="game-board"></div>
             <div id="chat">
                 <div id="chat-messages"></div>
@@ -23,8 +27,6 @@
                 <button id="chat-send">Enviar</button>
             </div>
         </div>
-        <button id="resign-button">Desistir</button>
-        <div id="message"></div>
     </div>
     <script src="script.js"></script>
 </body>
