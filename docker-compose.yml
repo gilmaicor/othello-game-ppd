@@ -1,0 +1,9 @@
+services:
+  othello:
+    build: .
+    container_name: othello-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command: ["./othello"]
