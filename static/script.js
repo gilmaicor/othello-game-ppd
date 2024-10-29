@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const updateTurnIndicator = () => {
+    const playerTurn =  document.getElementById('player-turn')
     document.getElementById('player-turn').textContent = `Vez do jogador: ${
       currentPlayer === 'black' ? 'Preto' : 'Branco'
     }`;

@@ -13,6 +13,10 @@ body {
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 h1 {
   margin-bottom: 20px;
 }
@@ -69,6 +73,16 @@ h1 {
 }
 
 .sidebar_score_white_box span {
+  color: black;
+}
+
+.player_black_turn {
+  background-color: black;
+  color:white;
+}
+
+.player_white_turn {
+  background-color: white;
   color: black;
 }
 
