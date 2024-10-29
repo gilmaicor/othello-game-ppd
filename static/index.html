@@ -11,20 +11,39 @@
         <h1>Othello (Reversi)</h1>
         <div class="game-container">
             <div class="sidebar">
-                <div id="scoreboard">
-                    <span id="black-count">Preto: 0</span>
-                    <span id="white-count">Branco: 0</span>
+                <div class="sidebar_score">
+                    <div class="sidebar_score_item">
+                        <span>Preto</span>
+                        <div class="sidebar_score_box sidebar_score_black_box">
+                            <span id="black-count">0</span>
+                        </div>
+                    </div>
+                    <span> x </span>
+                    <div class="sidebar_score_item">
+                        <span>Branco</span>
+                        <div class="sidebar_score_box sidebar_score_white_box">
+                            <span id="white-count">0</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div id="player-color">Aguardando cor...</div>
+
                 <div id="player-turn">Vez do jogador: Preto</div>
-                <button id="resign-button">Desistir</button>
+                
                 <div id="message"></div>
+                
+                <button class="button danger" id="resign-button">Desistir</button>
             </div>
+
             <div id="game-board"></div>
-            <div id="chat">
+            
+            <div class="sidebar" id="chat">
                 <div id="chat-messages"></div>
+             
                 <input type="text" id="chat-input" placeholder="Digite uma mensagem...">
-                <button id="chat-send">Enviar</button>
+             
+                <button class="button" id="chat-send">Enviar</button>
             </div>
         </div>
     </div>

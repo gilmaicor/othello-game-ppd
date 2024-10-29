@@ -3,6 +3,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
 }
 
 .container {
@@ -24,22 +27,67 @@ h1 {
 .sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 16px;
+  padding: 12px;
   width: 200px;
   height: 395px;
-  background-color: #008060;
-  padding: 10px;
   border-radius: 5px;
+  background-color: #008060;
   color: white;
 }
 
-#scoreboard {
-  margin-bottom: 20px;
+.sidebar_score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-#player-color, #player-turn, #message {
-  margin-bottom: 10px;
+.sidebar_score_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sidebar_score_box {
+  padding: 16px;
+  min-width: 20px;
+  border-radius: 8px;
+}
+
+.sidebar_score_black_box {
+  background-color: black;
+}
+
+.sidebar_score_black_box span {
+  color: white;
+}
+
+.sidebar_score_white_box {
+  background-color: white;
+}
+
+.sidebar_score_white_box span {
+  color: black;
+}
+
+.button {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button.danger {
+  background-color: red;
+  color: white;
+  margin-top: auto;
+} 
+
+.button.send {
+  background-color: white;
 }
 
 #game-board {
@@ -75,21 +123,9 @@ h1 {
   background-color: white;
 }
 
-#chat {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 395px;
-  background-color: #008060;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 #chat-messages {
-  flex-grow: 1;
   border: 1px solid #ccc;
   padding: 10px;
-  margin-bottom: 10px;
   height: calc(100% - 72px);
   overflow-y: auto;
   background-color: #008060;
@@ -99,11 +135,8 @@ h1 {
 
 #chat-input {
   padding: 10px;
-  margin-bottom: 10px;
-}
-
-#chat-send {
-  padding: 10px;
+  border-radius: 4px;
+  border: none;
 }
 
 .chat-message {

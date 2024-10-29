@@ -105,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (piece === 'white') whiteCount++;
     });
 
-    document.getElementById('black-count').textContent = `Preto: ${blackCount}`;
+    document.getElementById('black-count').textContent = `${blackCount}`;
     document.getElementById(
       'white-count'
-    ).textContent = `Branco: ${whiteCount}`;
+    ).textContent = `${whiteCount}`;
   };
 
   const updateTurnIndicator = () => {
